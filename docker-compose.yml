@@ -8,10 +8,10 @@ services:
       - db_data:/var/lib/mysql
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: wordpress
-      MYSQL_DATABASE: project22
-      MYSQL_USER: srikanth
-      MYSQL_PASSWORD: srikanth123
+      MYSQL_ROOT_PASSWORD: poli
+      MYSQL_DATABASE: poli
+      MYSQL_USER: poli
+      MYSQL_PASSWORD: 123
 
   wordpress:
     image: wordpress:latest
@@ -19,10 +19,10 @@ services:
       - "3000:80"
     restart: always
     environment:
-      WORDPRESS_DB_HOST: db
-      WORDPRESS_DB_PASSWORD: srikanth123
-      WORDPRESS_DB_USER: srikanth
-      WORDPRESS_DB_NAME: project22
+      WORDPRESS_DB_HOST: poli
+      WORDPRESS_DB_PASSWORD: 123
+      WORDPRESS_DB_USER: poli
+      WORDPRESS_DB_NAME: poli
     volumes:
       - wordpress_data:/var/www/html
 
